@@ -1,7 +1,7 @@
 <h1>Zadanie domowe</h1>
 
 zeby uruchomic: <br>
-trzeba postawic serwer mysql na porcie 3306 (np. xampp) <br>
+trzeba postawic serwer mysql na porcie 3306 (np. xampp), w ktorym bedzie znajdowac sie baza o nazwie "zadanie" <br>
 uzyc komendy "yarn prisma migrate dev --name initialization" <br>
 (jesli nie znaleziono komendy prisma nalezy wpisac "yarn global add prisma") <br>
 i uzyc komendy "yarn start" <br>
