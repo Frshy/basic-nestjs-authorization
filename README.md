@@ -1,9 +1,9 @@
-zeby uruchomic:
-trzeba postawic serwer mysql na porcie 3306 (np. xampp)
-uzyc komendy "yarn prisma migrate dev --name initialization"
-i uzyc komendy "yarn start"
+zeby uruchomic: <br>
+trzeba postawic serwer mysql na porcie 3306 (np. xampp) <br>
+uzyc komendy "yarn prisma migrate dev --name initialization" <br>
+i uzyc komendy "yarn start" <br>
 
-(jesli nie znaleziono yarna nalezy wpisac "npm install --global yarn")
+(jesli nie znaleziono yarna nalezy wpisac "npm install --global yarn") <br>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
