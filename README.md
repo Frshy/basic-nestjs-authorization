@@ -3,7 +3,11 @@
 zeby uruchomic: <br>
 trzeba postawic serwer mysql na porcie 3306 (np. xampp) <br>
 uzyc komendy "yarn prisma migrate dev --name initialization" <br>
+(jesli nie znaleziono komendy prisma nalezy wpisac "yarn global add prisma") <br>
 i uzyc komendy "yarn start" <br>
+jesli wystepuja bledy to sa prawdopodobnie spowodowane tym ze zrobilem kilka pomylek przy dodawaniu bibliotek, zeby to naprawic nalezy ja dodac: <br>
+"yarn add @nestjs/common" <br>
+"yarn add @prisma/client" <br>
 
 (jesli nie znaleziono yarna nalezy wpisac "npm install --global yarn") <br>
 
