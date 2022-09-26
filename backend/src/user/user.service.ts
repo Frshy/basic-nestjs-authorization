@@ -1,5 +1,6 @@
 import { ConflictException, ForbiddenException, HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
+import { User } from 'src/auth/entity/user.entity';
 import { PrismaService } from '../prisma/prisma.service';
 import { DeleteDto, EditDto } from './dto';
 
@@ -57,5 +58,9 @@ export class UserService {
         return {
             message: 'poprawnie usunieto uzytkownika'
         }
+    }
+
+    getMe(user: User) {
+        console.log(user)
     }
 }

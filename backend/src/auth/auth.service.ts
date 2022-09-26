@@ -18,7 +18,7 @@ export class AuthService {
 
         if (existingUser) {
             throw new ConflictException(
-                'nazwa uzytkownika jest juz zajeta!'
+                'Nazwa uzytkownika jest już zajęta!'
             )
         }
 
@@ -33,7 +33,7 @@ export class AuthService {
         })
 
         return {
-            message: 'poprawnie zarejestrowano!'
+            message: 'Poprawnie zarejestrowano!'
         }
     }
 
@@ -44,7 +44,7 @@ export class AuthService {
 
         if (!user) {
             throw new ForbiddenException(
-                'uzytkownik nie istnieje'
+                'Niepoprawna nazwa użytkownika!'
             )
         }
 
@@ -52,7 +52,7 @@ export class AuthService {
 
         if (!passwordMatch) {
             throw new ForbiddenException(
-                'nieprawidlowe haslo'
+                'Nieprawidłowe hasło'
             )
         }
 
