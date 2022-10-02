@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getCookie } from 'cookies-next';
+import Link from 'next/link'
 
 const validationSchema = yup.object({
   username: yup
@@ -96,6 +97,9 @@ const Register = () => {
               <div className='text-red-500'>{error}</div>
             ) : null}
 
+            <div className='hover:text-red-500 duration-300'>
+              <Link href="/auth/register">Posiadasz już konto? Zaloguj się!</Link>
+            </div>
           </Form>
         )}
       </Formik>

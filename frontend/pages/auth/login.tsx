@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getCookies, setCookie, deleteCookie, getCookie } from 'cookies-next';
+import Link from 'next/link';
 
 const validationSchema = yup.object({
   username: yup
@@ -23,7 +24,16 @@ const Register = () => {
 
   useEffect(() => {
     if (getCookie('access_token')) {
-      router.push('/dashboard')
+      axios.get('http://localhost:4000/user/getMe', {
+        headers: {
+          'Authorization': `Bearer ${getCookie('access_token')}`
+        }
+      }).then(res => {
+        router.push('/dashboard')
+      }).catch(err => {
+        deleteCookie('access_token')
+      })
+
     }
   }, [])
 
@@ -81,6 +91,10 @@ const Register = () => {
             {error ? (
               <div className='text-red-500'>{error}</div>
             ) : null}
+
+            <div className='hover:text-red-500 duration-300'>
+              <Link href="/auth/register">Nie posiadasz konta? Zarejestruj się!</Link>
+            </div>
 
           </Form>
         )}
